@@ -25,6 +25,8 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenObtainPairView.as_view(), name='token_refresh'),
     path('api/customers/', include('customers.urls')),
+    path('api/retailers/', include('retailers.urls')),
+    path('api/products/', include('products.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
